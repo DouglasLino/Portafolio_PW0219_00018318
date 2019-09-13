@@ -1,0 +1,43 @@
+
+$bg_image: url("https://cdn.wallpapersafari.com/83/31/DBzikL.jpg");
+
+@mixin space-std($margin, $padding){
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin nav {
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+
+body{
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+    overflow: hidden;
+    background-image: $bg_image;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    @include space-std(0,1em 5%);
+    @include flex-center();
+
+}
+
+nav{
+    @include nav();
+}
